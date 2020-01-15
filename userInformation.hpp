@@ -8,16 +8,16 @@ using namespace std;
 class userInformation
 {
 	private:
-		int counter = 0; // testing
+		int counter = 0;
 		ifstream fin;
+		ofstream fout;
 		string userID;
 		string password;
 		string encryptedPassword;
-		string key;
 	public:
 		userInformation();
 		void loadLastNames();
-		void createPassword();
+		string createPassword();
 		
 	
 };
