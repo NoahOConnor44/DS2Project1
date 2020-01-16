@@ -17,7 +17,9 @@ class userInformation
 	public:
 		userInformation();
 		void loadLastNames();
+		void loadRawPasswords();
 		string createPassword();
+		string encryptPassword(string& password);
 		
 	
 };
