@@ -39,8 +39,9 @@ void userInformation::loadRawPasswords()
 	while(getline(fin,line))
 	{
 		int space = line.find(' ');
+		string userID = line.substr(0,space);
 		line = line.substr(space+1, line.length());
-		fout << encryptPassword(line) << endl;
+		fout << userID << " " << encryptPassword(line) << endl;
 	}
 	fin.close();
 	fout.close();
@@ -69,8 +70,7 @@ string userInformation::encryptPassword(string& password)
 	
 	// makes the key the same length as the password
 	while(key.length() < password.length())
-	{		
-		
+	{				
 		if (counter == 4)
 		{
 			key = key + letters[counter];
@@ -82,7 +82,6 @@ string userInformation::encryptPassword(string& password)
 			counter++;		
 		}
 	}
-	cout << "Password: " << password << "\tKey: " << key << endl;
 	
 	int passLength = password.length();
 	
