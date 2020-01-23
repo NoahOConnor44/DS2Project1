@@ -100,6 +100,7 @@ string userInformation::encryptPassword(string& password)
 			encryptedPass << char(key.at(i) + difference);
 		}
 	}
+	encryptedPassword = encryptedPass.str();
 	
 	return encryptedPass.str();
 }
