@@ -4,6 +4,7 @@ DS2 - Dr. Coffey
 Project 1
 T/R 4:00 - 5:15pm
 */
+
 #ifndef USERINFORMATION_H
 #define USERINFORMATION_H
 

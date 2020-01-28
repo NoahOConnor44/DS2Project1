@@ -68,7 +68,7 @@ string userInformation::encryptPassword(string& password)
 	char letters[] = {'j','o','n','e','s'};
 	int counter = 0;
 	
-	// makes the key the same length as the password
+	// makes the key the same length as the password so next function will work properly
 	while(key.length() < password.length())
 	{				
 		if (counter == 4)
